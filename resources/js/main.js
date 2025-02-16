@@ -125,8 +125,37 @@ function addItemToDOM(text, completed) {
 
 function clearAll() {
   data.todo = []
-  data.complete = []
+  data.completed = []
   document.getElementById("todo").innerHTML = ""
   document.getElementById("completed").innerHTML = ""
   dataObjectUpdated();
 }
+
+function clearPending() {
+  data.todo = []
+  document.getElementById("todo").innerHTML = ""
+  dataObjectUpdated();
+}
+
+function clearCompleted() {
+  data.completed = []
+  document.getElementById("completed").innerHTML = ""
+  dataObjectUpdated();
+}
+
+function mark(){
+  [...document.getElementById("todo").children].forEach((e)=>{
+    e.getElementsByClassName("complete").item(0).click()
+  })
+}
+
+function unmark(){
+  [...document.getElementById("completed").children].forEach((e)=>{
+    e.getElementsByClassName("complete").item(0).click()
+  })
+}
+
+// if(data.todo.length == 0){
+//   addItem("create test cases")
+// }
+console.log(data)

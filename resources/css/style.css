@@ -220,7 +220,7 @@ ul.todo li .buttons button.complete svg .fill {
 
 ul.todo#completed {
   position: relative;
-  padding: 60px 0 0 0;
+  /* padding: 60px 0 0 0; */
 }
 
 ul.todo#completed:before {
@@ -256,11 +256,19 @@ ul.todo#completed:after {
 .clear-all{
   text-align: center;
 }
-.clear-all button{
+.clear-all button, .controls button{
   padding: 5px;
   margin: 5px;
   background-color: #25b99a;
   color: white;
   border: none;
   border-radius: 5px;
+}
+.tasks-heading{
+  padding: 10px;
+  margin: 10px;
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }

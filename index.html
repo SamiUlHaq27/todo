@@ -28,9 +28,23 @@
 		<div class="clear-all" onclick="clearAll()"> <button>Clear</button> </div>
 
 		<div class="container">
+			<div class="tasks-heading">
+				<h2>Pending Tasks</h2>
+				<div class="controls">
+					<button onclick="mark()">Mark All</button>
+					<button onclick="clearPending()">Clear All</button>
+				</div>
+			</div>
 			<!-- Uncompleted tasks -->
 			<ul class="todo" id="todo"></ul>
 
+			<div class="tasks-heading">
+				<h2>Compeleted Tasks</h2>
+				<div class="controls">
+					<button onclick="unmark()">Unmark All</button>
+					<button onclick="clearCompleted()">Clear All</button>
+				</div>
+			</div>
 			<!-- Completed tasks -->
 			<ul class="todo" id="completed"></ul>
 		</div>
