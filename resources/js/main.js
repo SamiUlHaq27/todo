@@ -120,3 +120,13 @@ function addItemToDOM(text, completed) {
 
   list.insertBefore(item, list.childNodes[0]);
 }
+
+// ------------------------ Additional -------------------------
+
+function clearAll() {
+  data.todo = []
+  data.complete = []
+  document.getElementById("todo").innerHTML = ""
+  document.getElementById("completed").innerHTML = ""
+  dataObjectUpdated();
+}
